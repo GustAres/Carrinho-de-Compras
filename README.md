@@ -25,9 +25,9 @@ Projeto final da disciplina de Programação Orientada a Objetos (POO), utilizan
 javac *.java
 ```
 
-2. Execute a classe `Main`:
+2. Execute a classe `InterfaceCarrinho`:
 ```bash
-java Main
+java InterfaceCarrinho
 ```
 
 ## 💡 Simulação
@@ -38,4 +38,4 @@ O sistema adiciona produtos físicos e digitais ao carrinho, aplica um desconto 
 
 Este projeto demonstra como aplicar abstração, interfaces e exceções para criar um sistema modular, seguro e reutilizável.
 
-Desenvolvido por [Seu Nome] & [Parceiro] - Julho/2025.
+Desenvolvido por Gustavo Procopio - Julho/2025.
