@@ -82,27 +82,13 @@
 
   <section id="pratica">
     <h2>2. Parte Prática</h2>
-    <h3>Classe Abstrata</h3>
-    <pre><code>public abstract class Produto {
-  private String nome;
-  private double preco;
-  // ...
-}</code></pre>
+     <p><strong>Classe Abstrata:</strong> Uma classe abstrata serve como base para outras classes e não pode ser instanciada diretamente. No projeto, usamos a classe <code>Produto</code> como abstrata, pois ela representa um conceito genérico de produto. Suas subclasses concretas, como <code>ProdutoFisico</code> e <code>ProdutoDigital</code>, herdam os atributos e métodos comuns, mas também podem adicionar comportamentos específicos. Isso favorece a reutilização de código e organiza melhor a estrutura do sistema.</p>
 
-    <h3>Interface</h3>
-    <pre><code>public interface Descontavel {
-  double aplicarDesconto(double valor);
-}</code></pre>
+    <p><strong>Interface:</strong> Interfaces representam comportamentos que podem ser implementados por qualquer classe, mesmo sem relação hierárquica entre elas. Criamos a interface <code>Descontavel</code> para definir a habilidade de aplicar desconto. Ao implementar essa interface na classe <code>Carrinho</code>, garantimos que qualquer objeto desse tipo terá um método para aplicar descontos, permitindo maior flexibilidade e extensibilidade do sistema.</p>
 
-    <h3>Exemplo de Uso</h3>
-    <pre><code>Produto livro = new ProdutoFisico("Livro", 50);
-carrinho.adicionarProduto(livro);
+    <p><strong>Polimorfismo:</strong> Polimorfismo é a capacidade de tratar objetos de diferentes classes de forma unificada, desde que compartilhem uma estrutura comum. No projeto, conseguimos tratar <code>ProdutoFisico</code> e <code>ProdutoDigital</code> como <code>Produto</code>, facilitando operações como adicionar ao carrinho ou calcular o total. Isso torna o código mais genérico, limpo e fácil de manter.</p>
 
-try {
-  carrinho.finalizarCompra(30);
-} catch (SaldoInsuficienteException e) {
-  System.out.println("Erro: " + e.getMessage());
-}</code></pre>
+    <p><strong>Exceções:</strong> O tratamento de exceções torna o sistema mais robusto e seguro. Criamos duas exceções personalizadas: <code>SaldoInsuficienteException</code>, que é lançada quando o usuário tenta finalizar uma compra sem saldo suficiente; e <code>ProdutoInexistenteException</code>, que pode ser usada ao tentar acessar ou remover um produto não registrado. Essas exceções tornam os erros mais claros e ajudam na manutenção futura do código.</p>
   </section>
 
   <section id="links">
