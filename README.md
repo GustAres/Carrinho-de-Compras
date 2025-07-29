@@ -25,9 +25,9 @@ Projeto final da disciplina de Programação Orientada a Objetos (POO), utilizan
 javac *.java
 ```
 
-2. Execute a classe `Main`:
+2. Execute a classe `InterfaceCarrinho`:
 ```bash
-java Main
+java InterfaceCarrinho
 ```
 
 ## 💡 Simulação
