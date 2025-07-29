@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras - Projeto Final</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2c3e50;
+      color: white;
+    }
+    nav {
+      background-color: #34495e;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin: 2rem auto;
+      max-width: 900px;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    code, pre {
+      background: #eee;
+      padding: 0.5rem;
+      display: block;
+      overflow-x: auto;
+    }
+    a {
+      color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Simulação de um Carrinho de Compras</h1>
+    <p>Trabalho Final de POO - Classes Abstratas, Interfaces e Exceções</p>
+  </header>
+
+  <nav>
+    <a href="#teoria">Teoria</a>
+    <a href="#pratica">Prática</a>
+    <a href="#links">Links</a>
+  </nav>
+
+  <section id="teoria">
+    <h2>1. Parte Teórica</h2>
+    <p><strong>Classe Abstrata:</strong> Utilizamos <code>Produto</code> como classe abstrata para representar um produto genérico, com subclasses concretas como <code>ProdutoFisico</code> e <code>ProdutoDigital</code>.</p>
+
+    <p><strong>Interface:</strong> Criamos a interface <code>Descontavel</code> para representar a habilidade de aplicar descontos. A classe <code>Carrinho</code> implementa essa interface.</p>
+
+    <p><strong>Polimorfismo:</strong> Com a abstração, é possível tratar <code>ProdutoFisico</code> e <code>ProdutoDigital</code> como <code>Produto</code>, facilitando o uso em listas.</p>
+
+    <p><strong>Exceções:</strong> Foram criadas duas exceções personalizadas: <code>SaldoInsuficienteException</code> e <code>ProdutoInexistenteException</code>.</p>
+  </section>
+
+  <section id="pratica">
+    <h2>2. Parte Prática</h2>
+    <h3>Classe Abstrata</h3>
+    <pre><code>public abstract class Produto {
+  private String nome;
+  private double preco;
+  // ...
+}</code></pre>
+
+    <h3>Interface</h3>
+    <pre><code>public interface Descontavel {
+  double aplicarDesconto(double valor);
+}</code></pre>
+
+    <h3>Exemplo de Uso</h3>
+    <pre><code>Produto livro = new ProdutoFisico("Livro", 50);
+carrinho.adicionarProduto(livro);
+
+try {
+  carrinho.finalizarCompra(30);
+} catch (SaldoInsuficienteException e) {
+  System.out.println("Erro: " + e.getMessage());
+}</code></pre>
+  </section>
+
+  <section id="links">
+    <h2>3. Links Importantes</h2>
+    <ul>
+      <li><a href="https://github.com/seu-usuario/repositorio-carrinho" target="_blank">Código-Fonte no GitHub</a></li>
+      <li><a href="https://youtube.com/video-apresentacao" target="_blank">Vídeo de Apresentação</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por [Seu Nome] & [Parceiro] - Julho/2025</p>
+  </footer>
+</body>
+</html>
