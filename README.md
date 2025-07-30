@@ -1,4 +1,4 @@
-#Site para acesso a relatório do projeto:
+# Site para acesso a relatório do projeto:
 https://gustares.github.io/Carrinho-de-Compras/#links
 # Simulação de um Carrinho de Compras
 
